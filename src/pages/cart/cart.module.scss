@@ -1,0 +1,14 @@
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .buttons {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    gap: 1rem;
+    width: 100%;
+  }
+}
