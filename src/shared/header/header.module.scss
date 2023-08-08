@@ -1,0 +1,26 @@
+.container {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+
+  .content {
+    max-width: 80rem;
+    width: 100%;
+
+    .header {
+      padding: 1rem 0rem;
+      width: auto;
+      display: flex;
+      flex-direction: row;
+      justify-content: end;
+      align-items: center;
+      gap: 2rem;
+      .buttons {
+        padding: 0.4rem;
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+      }
+    }
+  }
+}
