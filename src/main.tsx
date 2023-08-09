@@ -7,6 +7,8 @@ import Market from './pages/market/Market.tsx';
 import Cart from './pages/cart/Cart.tsx';
 import { CssBaseline } from '@mui/material';
 import Header from './shared/header/Header.tsx';
+import { store } from './store/store.ts';
+import { Provider } from 'react-redux';
 
 const router = createBrowserRouter([
   {
@@ -36,7 +38,9 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <CssBaseline />
-    <RouterProvider router={router} />
+    <Provider store={store}>
+      <CssBaseline />
+      <RouterProvider router={router} />
+    </Provider>
   </React.StrictMode>
 );
