@@ -12,7 +12,6 @@ import PocketBase from 'pocketbase';
 import { useForm, SubmitHandler, Controller, set } from 'react-hook-form';
 import { iLoginFields } from '../../shared/interfaces';
 import { useAppDispatch, useAppSelector } from '../../shared/hooks/redux';
-import { setNew } from '../../store/reducers/UserSlice';
 import { useNavigate } from 'react-router-dom';
 
 function Login() {
@@ -56,7 +55,6 @@ function Login() {
       .catch((e) => handleOpenSnackbar('Failed to login.', 'error'));
 
     if (pb.authStore.isValid) {
-      console.log(pb.authStore.model);
       navigate('/market');
     }
   };

@@ -1,10 +1,12 @@
 import { configureStore } from '@reduxjs/toolkit';
-import userReducer from './reducers/UserSlice';
+import { skillsApi } from '../services/skills';
 
 export const store = configureStore({
   reducer: {
-    user: userReducer,
+    [skillsApi.reducerPath]: skillsApi.reducer,
   },
+  middleware: (getDefaultMiddleware) =>
+    getDefaultMiddleware().concat(skillsApi.middleware),
 });
 
 export type RootState = ReturnType<typeof store.getState>;

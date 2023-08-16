@@ -24,3 +24,19 @@
     }
   }
 }
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  .dropzone {
+    border: thin dashed gray;
+    border-radius: 0.5rem;
+    padding: 0 1rem;
+  }
+  .avatar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
